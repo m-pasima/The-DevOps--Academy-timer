@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevOps Academy Program Ad - Starts March 10, 2025</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Basic Resets and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background-color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header / Hero Section */
+    header {
+      background: url('https://images.unsplash.com/photo-1543269664-76bc3997d9ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')
+                 no-repeat center center/cover;
+      position: relative;
+      color: #fff;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .hero-content p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    .hero-btn {
+      display: inline-block;
+      background-color: #ffcc00;
+      color: #333;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    .hero-btn:hover {
+      background-color: #e6b800;
+    }
+
+    /* Countdown & Program Info Section */
+    .info-section {
+      background-color: #ffffff;
+      margin: -5rem auto 2rem auto;
+      border-radius: 8px;
+      max-width: 1100px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    .info-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #1a73e8;
+    }
+    .info-section p {
+      text-align: center;
+      max-width: 850px;
+      margin: 0.75rem auto 1.5rem auto;
+      line-height: 1.6;
+    }
+    .countdown {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      margin: 2rem 0 2.5rem 0;
+      flex-wrap: wrap;
+    }
+    .countdown-box {
+      background-color: #f8f8f8;
+      padding: 1rem 1.2rem;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      text-align: center;
+      min-width: 100px;
+    }
+    .countdown-box h3 {
+      font-size: 1.8rem;
+      color: #1a73e8;
+      margin-bottom: 0.25rem;
+    }
+    .countdown-box small {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #666;
+      text-transform: uppercase;
+    }
+
+    /* Program Highlights */
+    .highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem 0;
+      justify-content: center;
+    }
+    .highlight-item {
+      background-color: #fafafa;
+      border-left: 3px solid #1a73e8;
+      padding: 1rem;
+      border-radius: 4px;
+      flex: 1 1 270px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+    }
+    .highlight-item h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      color: #1a73e8;
+    }
+    .highlight-item p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Tools Section */
+    #tools {
+      background-color: #ffffff;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      max-width: 1100px;
+    }
+    #tools h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #1a73e8;
+    }
+    .tools-category {
+      margin-bottom: 1.5rem;
+    }
+    .tools-category h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: #d32f2f;
+      text-align: center;
+    }
+    .tools-category p {
+      text-align: center;
+    }
+    .tools-category p img {
+      margin: 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: auto;
+      background-color: #1a73e8;
+      color: #fff;
+    }
+    footer p {
+      margin: 0.3rem 0;
+    }
+    footer a {
+      color: #ffcc00;
+      text-decoration: underline;
+    }
+
+    /* Responsive Media Queries */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+      .hero-content p {
+        font-size: 1rem;
+      }
+      .info-section {
+        margin-top: -3rem;
+      }
+      .countdown-box {
+        min-width: 80px;
+      }
+      .countdown-box h3 {
+        font-size: 1.3rem;
+      }
+      .highlight-item h3 {
+        font-size: 1.1rem;
+      }
+      .tools-category h3 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <header>
+    <div class="hero-content">
+      <h1>DevOps Academy Program</h1>
+      <p>Start your journey to mastering DevOps with our comprehensive curriculum. From Linux fundamentals to Kubernetes orchestration, we’ve got you covered!</p>
+      <a href="#info" class="hero-btn">Secure Your Spot</a>
+    </div>
+  </header>
+
+  <!-- Main Info Section -->
+  <section class="info-section" id="info">
+    <h2>Starts March 10, 2025</h2>
+    <p>Mark your calendar for the next batch of our DevOps Academy Program. Our expert-led training covers every crucial phase of a modern DevOps pipeline—so you can upskill and stay ahead in an ever-evolving tech landscape.</p>
+
+    <!-- Countdown Timer -->
+    <div class="countdown">
+      <div class="countdown-box">
+        <h3 id="days">0</h3>
+        <small>Days</small>
+      </div>
+      <div class="countdown-box">
+        <h3 id="hours">0</h3>
+        <small>Hours</small>
+      </div>
+      <div class="countdown-box">
+        <h3 id="minutes">0</h3>
+        <small>Minutes</small>
+      </div>
+      <div class="countdown-box">
+        <h3 id="seconds">0</h3>
+        <small>Seconds</small>
+      </div>
+    </div>
+
+    <!-- Program Highlights -->
+    <div class="highlights">
+      <div class="highlight-item">
+        <h3>Hands-On Learning</h3>
+        <p>Practice real-world scenarios, from setting up CI/CD pipelines to containerizing apps with Docker and Kubernetes.</p>
+      </div>
+      <div class="highlight-item">
+        <h3>Expert Mentors</h3>
+        <p>Get guidance from seasoned DevOps professionals who’ve worked with top-tier organizations around the globe.</p>
+      </div>
+      <div class="highlight-item">
+        <h3>Comprehensive Curriculum</h3>
+        <p>We cover Linux, Git, Jenkins, Docker, Kubernetes, AWS, Infrastructure as Code, and more—leaving no stone unturned.</p>
+      </div>
+      <div class="highlight-item">
+        <h3>Career Boost</h3>
+        <p>Stand out in the job market with in-demand skills. Our program is designed to fast-track your DevOps career.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools Section -->
+  <section id="tools">
+    <h2>Tools</h2>
+    <div class="tools-category">
+      <h3>CI/CD and Automation</h3>
+      <p>
+        <img src="https://img.shields.io/badge/-Jenkins-D24939?&style=for-the-badge&logo=Jenkins&logoColor=white" alt="Jenkins">
+        <img src="https://img.shields.io/badge/-GitHub_Actions-2088FF?&style=for-the-badge&logo=GitHub-Actions&logoColor=white" alt="GitHub Actions">
+        <img src="https://img.shields.io/badge/-Terraform-623CE4?&style=for-the-badge&logo=Terraform&logoColor=white" alt="Terraform">
+        <img src="https://img.shields.io/badge/-Ansible-EE0000?&style=for-the-badge&logo=Ansible&logoColor=white" alt="Ansible">
+        <img src="https://img.shields.io/badge/-Nexus-4E73B9?&style=for-the-badge&logo=Sonatype&logoColor=white" alt="Nexus">
+        <img src="https://img.shields.io/badge/-SonarQube-4E9BCD?&style=for-the-badge&logo=SonarQube&logoColor=white" alt="SonarQube">
+        <img src="https://img.shields.io/badge/-Tomcat-F8DC75?&style=for-the-badge&logo=Apache%20Tomcat&logoColor=black" alt="Tomcat">
+        <img src="https://img.shields.io/badge/-Docker-2496ED?&style=for-the-badge&logo=Docker&logoColor=white" alt="Docker">
+      </p>
+    </div>
+    <div class="tools-category">
+      <h3>Cloud Platforms</h3>
+      <p>
+        <img src="https://img.shields.io/badge/-AWS-232F3E?&style=for-the-badge&logo=Amazon-AWS&logoColor=white" alt="AWS">
+        <img src="https://img.shields.io/badge/-GCP-4285F4?&style=for-the-badge&logo=Google-Cloud&logoColor=white" alt="GCP">
+      </p>
+    </div>
+    <div class="tools-category">
+      <h3>Containerization & Orchestration</h3>
+      <p>
+        <img src="https://img.shields.io/badge/-Docker-2496ED?&style=for-the-badge&logo=Docker&logoColor=white" alt="Docker">
+        <img src="https://img.shields.io/badge/-Kubernetes-326CE5?&style=for-the-badge&logo=Kubernetes&logoColor=white" alt="Kubernetes">
+        <img src="https://img.shields.io/badge/-Helm-0F1689?&style=for-the-badge&logo=Helm&logoColor=white" alt="Helm">
+      </p>
+    </div>
+    <div class="tools-category">
+      <h3>Monitoring & Logging</h3>
+      <p>
+        <img src="https://img.shields.io/badge/-Prometheus-E6522C?&style=for-the-badge&logo=Prometheus&logoColor=white" alt="Prometheus">
+        <img src="https://img.shields.io/badge/-Grafana-F46800?&style=for-the-badge&logo=Grafana&logoColor=white" alt="Grafana">
+        <img src="https://img.shields.io/badge/-CloudWatch-FF9900?&style=for-the-badge&logo=Amazon%20AWS&logoColor=white" alt="CloudWatch">
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>Contact:</strong> info.devopsacademy@gmx.co.uk | Birmingham, UK | Tel: 07533020152</p>
+    <p>© 2025 The DevOps Academy • All rights reserved.</p>
+    <p>Ready to join? <a href="mailto:info.devopsacademy@gmx.co.uk">Email us</a> or call 07533020152 to register today!</p>
+  </footer>
+
+  <!-- JavaScript for Countdown Timer -->
+  <script>
+    // Set the date we're counting down to (March 10, 2025)
+    var countDownDate = new Date("Mar 10, 2025 00:00:00").getTime();
+
+    // Update the countdown every 1 second
+    var countdownfunction = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds;
+
+      if (distance < 0) {
+        clearInterval(countdownfunction);
+        document.querySelector(".countdown").innerHTML = "<p style='font-size:1.3rem; color:#ff0000;'>The program has started!</p>";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
