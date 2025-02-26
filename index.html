@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -6,8 +6,15 @@
   <title>DevOps Academy Program Ad - Starts March 10, 2025</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
   <style>
+    /* Define a green-based color scheme */
+    :root {
+      --primary-color: #00695C;       /* Rich green-teal */
+      --accent-color: #26A69A;        /* Lighter green-teal */
+      --text-color: #333;
+      --background-color: #f2f2f2;
+    }
+
     /* Basic Resets and Base Styles */
     * {
       margin: 0;
@@ -19,8 +26,8 @@
     }
     body {
       font-family: 'Poppins', sans-serif;
-      color: #333;
-      background-color: #f2f2f2;
+      color: var(--text-color);
+      background-color: var(--background-color);
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -46,7 +53,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+      background-color: rgba(0, 0, 0, 0.4);
     }
     .hero-content {
       position: relative;
@@ -67,15 +74,15 @@
     }
     .hero-btn {
       display: inline-block;
-      background-color: #ffcc00;
-      color: #333;
+      background-color: var(--accent-color);
+      color: #fff;
       padding: 0.75rem 1.5rem;
       font-weight: 600;
       border-radius: 4px;
       transition: background-color 0.3s ease;
     }
     .hero-btn:hover {
-      background-color: #e6b800;
+      background-color: var(--primary-color);
     }
 
     /* Countdown & Program Info Section */
@@ -93,7 +100,7 @@
       text-align: center;
       font-size: 2rem;
       margin-bottom: 1rem;
-      color: #1a73e8;
+      color: var(--primary-color);
     }
     .info-section p {
       text-align: center;
@@ -119,7 +126,7 @@
     }
     .countdown-box h3 {
       font-size: 1.8rem;
-      color: #1a73e8;
+      color: var(--primary-color);
       margin-bottom: 0.25rem;
     }
     .countdown-box small {
@@ -139,7 +146,7 @@
     }
     .highlight-item {
       background-color: #fafafa;
-      border-left: 3px solid #1a73e8;
+      border-left: 3px solid var(--primary-color);
       padding: 1rem;
       border-radius: 4px;
       flex: 1 1 270px;
@@ -148,7 +155,7 @@
     .highlight-item h3 {
       margin-bottom: 0.5rem;
       font-size: 1.2rem;
-      color: #1a73e8;
+      color: var(--primary-color);
     }
     .highlight-item p {
       font-size: 0.95rem;
@@ -168,7 +175,7 @@
       text-align: center;
       font-size: 2rem;
       margin-bottom: 1.5rem;
-      color: #1a73e8;
+      color: var(--primary-color);
     }
     .tools-category {
       margin-bottom: 1.5rem;
@@ -191,7 +198,7 @@
       text-align: center;
       padding: 1rem;
       margin-top: auto;
-      background-color: #1a73e8;
+      background-color: var(--primary-color);
       color: #fff;
     }
     footer p {
@@ -200,31 +207,6 @@
     footer a {
       color: #ffcc00;
       text-decoration: underline;
-    }
-
-    /* Responsive Media Queries */
-    @media (max-width: 768px) {
-      .hero-content h1 {
-        font-size: 2.2rem;
-      }
-      .hero-content p {
-        font-size: 1rem;
-      }
-      .info-section {
-        margin-top: -3rem;
-      }
-      .countdown-box {
-        min-width: 80px;
-      }
-      .countdown-box h3 {
-        font-size: 1.3rem;
-      }
-      .highlight-item h3 {
-        font-size: 1.1rem;
-      }
-      .tools-category h3 {
-        font-size: 1.3rem;
-      }
     }
   </style>
 </head>
@@ -235,6 +217,10 @@
       <h1>DevOps Academy Program</h1>
       <p>Start your journey to mastering DevOps with our comprehensive curriculum. From Linux fundamentals to Kubernetes orchestration, we’ve got you covered!</p>
       <a href="#info" class="hero-btn">Secure Your Spot</a>
+      <!-- Add a link for students to access the main curriculum page -->
+      <p style="margin-top:1rem; font-size:1.1rem;">
+        <a href="https://m-pasima.github.io/The-DevOps-Academy/" target="_blank" style="color:#ffcc00; font-weight:600;">Visit the Full Curriculum</a>
+      </p>
     </div>
   </header>
 
